@@ -1,0 +1,248 @@
+
+:root{
+    /* COLORS */
+    --ash: #555;
+    --black: #000;
+    --white: #fff;
+    --f-color: #f4f4f4;
+    --color: #e0e0e0;
+    --radius: 5px;
+
+
+    /* FONTS  */
+    --p-font: 0.8em;
+    --spacing: 2px;
+
+    --H-index: 999;
+    --L-index: 888;
+    --shadow: 0 0 3px #555;
+}
+
+/* navbar bg-color #e2bb04 */
+/* navbar txt-color #000000 */
+
+/* ////////////// REUSED STYLES ////////////// */
+.scale_anim, .scale_in{
+    transition: 0.3s;
+    transform: scaleX(1) !important;
+}
+
+.alert, .scale_out{
+    transition: 0.3s;
+    transform: scaleX(0);
+}
+
+.golden-color{
+    color: #e2bb04;
+}
+
+/* e2bb04 */
+
+
+
+
+/* ///////////////// ADMIN LOGIN ////////////// */
+.Admin_login{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('../../asserts/Images/form_bg2.webp') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+/*///////////////// ADMIN NAVBAR STYLING START /////////////////*/
+.Admin-nav-bar, .heading{
+    top: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: var(--H-index);
+}
+
+.Admin-nav-bar{
+    background: #000 !important;
+}
+
+.Admin-nav-bar h1{
+    color: #e2bb04 !important;
+}
+
+.Admin-nav-bar .avater{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    position: relative;
+}
+.Admin-nav-bar .avater img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    position: absolute;
+}
+
+
+
+
+
+/*//////////////// REUSED STYLE START ////////////////*/
+.Admin-home .title, 
+.Admin-home .details .main:nth-child(even){
+    background: var(--black);
+    color: var(--f-color);
+}
+/*///////////////// REUSED STYLE END /////////////////*/
+
+
+
+
+/*///////////// ADMIN HOME STYLING START  /////////////*/
+.heading{
+    top: 0%;
+    left: 0;
+    padding-top: 8em;
+    background: var(--white);
+    z-index: var(--L-index)!important;
+}
+
+.admin-content{
+    padding-top: 12em;
+    position: relative;
+}
+
+.Admin-home p{
+    font-size: var(--p-font);
+}
+
+.heading .admin-name{
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+}
+
+.Admin-home .heading .create-post{
+    cursor: pointer;
+    border-radius: var(--radius);
+}
+
+.Admin-home .heading .container p:nth-child(2){
+   cursor: pointer;
+}
+
+
+
+
+
+
+/*//////////////// APP DETAILS STYLING  ////////////////*/
+.Admin-home .app-details{
+    width: 25vw;
+    position: fixed;
+}
+
+.Admin-home .app-details ul li p:hover{
+    background: var(--black) !important;
+    color: var(--f-color);
+}
+
+
+
+
+
+
+
+
+/*////////////// POSTS STYLING START  //////////////*/
+.Admin-home .posts{
+    width: 60vw;
+    position: absolute;
+    right: 0;
+}
+
+.posts .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 10px;
+}
+
+.Admin-home .details:nth-child(odd) 
+{
+    cursor: pointer;
+    background: var(--f-color) !important;
+}
+
+.Admin-home .filter input{
+    width: 100%;
+}
+
+.Admin-home .blog-posts .posts-heading{
+    flex: 1;
+}
+
+.Admin-home .blog-posts .posts-heading p{
+    text-transform: capitalize;
+}
+
+.Admin-home .blog-posts .action p:hover{
+    text-decoration: underline;
+}
+
+.admin-content{
+    transition: 0.5s;
+}
+
+
+
+/*////////////// CUSTOM STYLINGS //////////////*/
+.pointer{
+    cursor: pointer;
+}
+
+.hide{
+    display: none !important;
+}
+
+
+
+
+
+/* ///////////////////////////////////////////////////// */
+@media(max-width: 982px){
+    .heading{
+        padding-top: 13em;
+    }
+
+    .Admin-home {
+        width: 100% !important;
+    }
+
+    .Admin-home .admin-content{
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .Admin-home .app-details{
+        margin: 2em auto !important;
+    }
+
+    .Admin-home .app-details,
+    .Admin-home .posts{
+        width: 90vw;
+        margin: auto;
+        position: relative;
+    }
+    
+    .Admin-home .products, .customers{
+        margin-top: -21em !important;
+    }
+    
+    .Admin-home .customers {
+        margin-top: -39em !important;
+    }
+
+    .Admin-home .add-products {
+        margin-top: -56em !important;
+    }
+}
+
+
